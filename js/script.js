@@ -1,8 +1,8 @@
 {
-function playGame(playerInput){
+const playGame = function (playerInput){
 	clearMessages();
 
-	function printMessage(msg){
+	const printMessage = function (msg){
 		const div = document.createElement('div');
 		div.innerHTML = msg;
 		document.getElementById('messages').appendChild(div);
@@ -16,8 +16,8 @@ function playGame(playerInput){
 
 		console.log('Wylosowana liczba to: ' + randomNumber);
 		}
-		
-	function getMoveName(argMoveId){
+
+		const getMoveName = function (argMoveId){
 		if(argMoveId == 1){
 		return 'kamień';
 		}
@@ -32,7 +32,7 @@ function playGame(playerInput){
 		return 'nieznany ruch';
 	}
 
-	function displayResult(argComputerMove, argPlayerMove){
+	const displayResult = function (argComputerMove, argPlayerMove){
 		console.log('moves:', argComputerMove, argPlayerMove);
 		console.log('Wywyołanie Funkcji');
 
