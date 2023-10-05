@@ -1,8 +1,9 @@
+{
 function playGame(playerInput){
 	clearMessages();
 
 	function printMessage(msg){
-		let div = document.createElement('div');
+		const div = document.createElement('div');
 		div.innerHTML = msg;
 		document.getElementById('messages').appendChild(div);
 	}
@@ -11,10 +12,11 @@ function playGame(playerInput){
 		document.getElementById('messages').innerHTML = '';
 	}
 
-		let randomNumber = Math.floor(Math.random() * 3 + 1);
+		const randomNumber = Math.floor(Math.random() * 3 + 1);{
 
 		console.log('Wylosowana liczba to: ' + randomNumber);
-
+		}
+		
 	function getMoveName(argMoveId){
 		if(argMoveId == 1){
 		return 'kamień';
@@ -51,11 +53,14 @@ function playGame(playerInput){
 		}
 	}
 
-		let argComputerMove = getMoveName(randomNumber);
+		const argComputerMove = getMoveName(randomNumber);{
 	
 		console.log('Gracz wpisał: ' + playerInput);
+		}
 
-		let argPlayerMove = getMoveName(playerInput);
+		const argPlayerMove = getMoveName(playerInput);{
+
+		}
 
 		displayResult(argComputerMove, argPlayerMove);
 
@@ -74,3 +79,4 @@ document.getElementById('play-paper').addEventListener('click', function(){
 document.getElementById('play-scissors').addEventListener('click', function(){
 	playGame(3);
 });
+}
